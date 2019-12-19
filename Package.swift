@@ -5,9 +5,21 @@ import PackageDescription
 
 let package = Package(
     name: "Shine",
+    products: [
+        .executable(name: "shine", targets: ["Shine"]),
+        .library(name: "ShineKit", targets: ["ShineKit"])
+    
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
+        .package(url: "https://github.com/kylef/PathKit.git", from: "1.0.0"),
+        .package(url: "https://github.com/onevcat/Rainbow.git", from: "3.1.0"),
+        .package(url: "https://github.com/jakeheis/SwiftCLI.git", from: "5.3.0"),
+        .package(url: "https://github.com/mxcl/Version.git", from: "1.1.0"),
+        .package(url: "https://github.com/JohnSundell/Files", from: "4.0.0"),
+        .package(url: "https://github.com/tuist/xcodeproj.git", .upToNextMajor(from: "7.5.0")),
+        .package(url:  "https://github.com/apple/swift-tools-support-core.git", .branch("master"))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -15,6 +27,8 @@ let package = Package(
         .target(
             name: "Shine",
             dependencies: []),
+        .target(name: "ShineCLI", dependencies: ["Rainbow", "SwiftCLI", "ShineKit"]),
+        .target(name: "ShineKit", dependencies: ["Rainbow", "PathKit", "Version", "SwiftCLI","Files"]),
         .testTarget(
             name: "ShineTests",
             dependencies: ["Shine"]),

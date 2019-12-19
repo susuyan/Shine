@@ -1,1 +1,5 @@
-print("Hello, world!")
+import ShineCLI
+
+let shineCLI = ShineCLI()
+shineCLI.execute()
+
