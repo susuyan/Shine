@@ -26,9 +26,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "Shine",
-            dependencies: []),
-        .target(name: "ShineCLI", dependencies: ["Rainbow", "SwiftCLI", "ShineKit"]),
-        .target(name: "ShineKit", dependencies: ["Rainbow", "PathKit", "Version", "SwiftCLI","Files"]),
+            dependencies: ["ShineCLI"]),
+        .target(
+            name: "ShineCLI",
+            dependencies: ["Rainbow", "SwiftCLI", "ShineKit"]),
+        .target(
+            name: "ShineKit",
+            dependencies: ["Rainbow", "PathKit", "Version", "SwiftCLI","Files"]),
         .testTarget(
             name: "ShineTests",
             dependencies: ["Shine"]),

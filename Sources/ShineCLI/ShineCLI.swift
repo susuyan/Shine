@@ -11,6 +11,7 @@ import Rainbow
 import SwiftCLI
 import ShineKit
 
+
 public class ShineCLI {
     public let version = "0.1.0"
 
@@ -29,9 +30,9 @@ public class ShineCLI {
             linkPath = Path(path)
         }
 
-        Shine = Shine(path: ShinePath, linkPath: linkPath)
+        shine = Shine(path: shinePath, linkPath: linkPath)
 
-        cli = CLI(name: "shine", version: version, description: "blog command", commands: [NewCommand(Shine: Shine)])
+        cli = CLI(name: "shine", version: version, description: "blog command", commands: [SetupCommand(shine: shine)])
     }
 
     public func execute(arguments: [String]? = nil) {

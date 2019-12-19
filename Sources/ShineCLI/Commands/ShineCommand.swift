@@ -18,7 +18,7 @@ class ShineCommand: Command {
     let longDescription: String
 
     init(shine: Shine, name: String, description: String, longDescription: String = "") {
-        self.shine = Shine
+        self.shine = shine
         self.name = name
         shortDescription = description
         self.longDescription = longDescription

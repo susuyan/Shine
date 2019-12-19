@@ -10,7 +10,7 @@ import PathKit
 import SwiftCLI
 import ShineKit
 
-class NewCommand: ShineCommand {
+class SetupCommand: ShineCommand {
 
 
     var arguments = OptionalCollectedParameter()
@@ -22,5 +22,6 @@ class NewCommand: ShineCommand {
     override func execute() throws {
         try super.execute()
 //        try! shine.createFile(arguments.value)
+        shine.setup()
     }
 }

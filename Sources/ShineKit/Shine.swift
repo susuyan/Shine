@@ -52,4 +52,8 @@ public class Shine {
         
         
     }
+
+    public func setup(){
+        output("执行setup")
+    }
 }
