@@ -32,7 +32,9 @@ public class ShineCLI {
 
         shine = Shine(path: shinePath, linkPath: linkPath)
 
-        cli = CLI(name: "shine", version: version, description: "blog command", commands: [SetupCommand(shine: shine)])
+        cli = CLI(name: "shine", version: version, description: "blog command", commands: [
+            SetupCommand(shine: shine),
+            GenerateCommand(shine: shine)])
     }
 
     public func execute(arguments: [String]? = nil) {

@@ -56,4 +56,8 @@ public class Shine {
     public func setup(){
         output("执行setup")
     }
+
+    public func generate(){
+        output("执行generate")
+    }
 }
