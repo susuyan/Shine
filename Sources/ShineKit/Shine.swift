@@ -60,4 +60,8 @@ public class Shine {
     public func generate(){
         output("执行generate")
     }
+
+    public func initial(){
+        output("执行init")
+    }
 }

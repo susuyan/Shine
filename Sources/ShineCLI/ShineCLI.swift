@@ -34,7 +34,8 @@ public class ShineCLI {
 
         cli = CLI(name: "shine", version: version, description: "blog command", commands: [
             SetupCommand(shine: shine),
-            GenerateCommand(shine: shine)])
+            GenerateCommand(shine: shine),
+            InitCommand(shine: shine)])
     }
 
     public func execute(arguments: [String]? = nil) {

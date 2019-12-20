@@ -81,6 +81,15 @@
           "revision": "23f7e12a7e0db29b4f16052692d99f9fbe41fa15",
           "version": "7.5.0"
         }
+      },
+      {
+        "package": "Yams",
+        "repositoryURL": "https://github.com/jpsim/Yams.git",
+        "state": {
+          "branch": null,
+          "revision": "c947a306d2e80ecb2c0859047b35c73b8e1ca27f",
+          "version": "2.0.0"
+        }
       }
     ]
   },
