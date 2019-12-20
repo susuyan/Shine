@@ -18,6 +18,7 @@ let package = Package(
         .package(url: "https://github.com/jakeheis/SwiftCLI.git", from: "5.3.0"),
         .package(url: "https://github.com/mxcl/Version.git", from: "1.1.0"),
         .package(url: "https://github.com/JohnSundell/Files", from: "4.0.0"),
+        .package(url: "https://github.com/jpsim/Yams.git", from: "2.0.0"),
         .package(url: "https://github.com/tuist/xcodeproj.git", .upToNextMajor(from: "7.5.0")),
         .package(url:  "https://github.com/apple/swift-tools-support-core.git", .branch("master"))
     ],
@@ -32,7 +33,13 @@ let package = Package(
             dependencies: ["Rainbow", "SwiftCLI", "ShineKit"]),
         .target(
             name: "ShineKit",
-            dependencies: ["Rainbow", "PathKit", "Version", "SwiftCLI","Files"]),
+            dependencies: [
+                "Rainbow",
+                "PathKit",
+                "Version",
+                "SwiftCLI",
+                "Files",
+                "Yams"]),
         .testTarget(
             name: "ShineTests",
             dependencies: ["Shine"]),
