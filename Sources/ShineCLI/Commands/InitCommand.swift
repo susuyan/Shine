@@ -1,13 +1,12 @@
 import Foundation
 import PathKit
-import SwiftCLI
 import ShineKit
+import SwiftCLI
 
 class InitCommand: ShineCommand {
 
-
     var arguments = OptionalCollectedParameter()
-    
+
     init(shine: Shine) {
         super.init(shine: shine, name: "init", description: "create new file")
     }

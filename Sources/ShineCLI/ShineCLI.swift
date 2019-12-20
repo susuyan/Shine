@@ -1,16 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by sanmy on 2019/12/19.
-//
-
 import Foundation
 import PathKit
 import Rainbow
-import SwiftCLI
 import ShineKit
-
+import SwiftCLI
 
 public class ShineCLI {
     public let version = "0.1.0"
@@ -35,7 +27,8 @@ public class ShineCLI {
         cli = CLI(name: "shine", version: version, description: "blog command", commands: [
             SetupCommand(shine: shine),
             GenerateCommand(shine: shine),
-            InitCommand(shine: shine)])
+            InitCommand(shine: shine),
+        ])
     }
 
     public func execute(arguments: [String]? = nil) {
@@ -59,4 +52,3 @@ extension ShineError: ProcessError {
         return 1
     }
 }
-

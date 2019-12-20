@@ -1,14 +1,7 @@
-//
-//  File.swift
-//  
-//
-//  Created by sanmy on 2019/12/19.
-//
-
 import Foundation
 import PathKit
-import SwiftCLI
 import ShineKit
+import SwiftCLI
 
 class ShineCommand: Command {
 

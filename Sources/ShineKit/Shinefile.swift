@@ -3,11 +3,10 @@ import PathKit
 
 public struct Shinefile: Codable {
 
-
 //     public init(path: Path) throws {
 //        guard path.exists else {
 //            // throw MintError.mintfileNotFound(path.string)
-//            return 
+//            return
 //        }
 //        let contents: String = try path.read()
 //        self.init(string: contents)
@@ -15,9 +14,8 @@ public struct Shinefile: Codable {
 //
 //    public init(string: String){
 //
-//        
+//
 //    }
-    
-    public var directory: [String]
 
+    public var directory: [String]
 }

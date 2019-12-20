@@ -1,15 +1,8 @@
-//
-//  File.swift
-//  
-//
-//  Created by sanmy on 2019/12/19.
-//
-
+import Files
 import Foundation
 import PathKit
 import Rainbow
 import SwiftCLI
-import Files
 import Yams
 
 public class Shine {
@@ -19,7 +12,7 @@ public class Shine {
 
     public var standardOut: WritableStream
     public var standardError: WritableStream
-    
+
     public var verbose = false
 
     public init(
@@ -48,34 +41,30 @@ public class Shine {
         standardError.closeWrite()
     }
 
-    
-    public func createFile(_ params:[String]) throws  {
-        
-        
-    }
+    public func createFile(_ params: [String]) throws {}
 
-    public func setup(){
+    public func setup() {
         output("执行setup")
     }
 
-    public func generate(){
+    public func generate() {
         output("执行generate")
     }
 
-    public func initial() throws{
+    public func initial() throws {
         output("执行init")
-        let filePath =  Path("./shine.yml").string
+        let filePath = Path("./shine.yml").string
 
         let file = try File(path: filePath)
-        
-        let content =  try file.readAsString()
+
+        let content = try file.readAsString()
 
         let decoder = YAMLDecoder()
-        
+
         let shineFile: Shinefile = try decoder.decode(Shinefile.self, from: content)
-        
-        //创建一个目录
-        
+
+        // 创建一个目录
+
         try shineFile.directory.forEach { dir in
             let dirPath = Path("./Examples/\(dir)")
             output("mkdir \(dirPath)")
@@ -83,7 +72,5 @@ public class Shine {
         }
 
         output("enjoys!")
-
-        
     }
 }
