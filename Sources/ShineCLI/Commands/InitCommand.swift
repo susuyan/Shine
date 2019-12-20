@@ -15,6 +15,6 @@ class InitCommand: ShineCommand {
     override func execute() throws {
         try super.execute()
 //        try! shine.createFile(arguments.value)
-        shine.initial()
+        try shine.initial()
     }
 }

@@ -1,4 +1,4 @@
-EXECUTABLE_NAME = Shine
+EXECUTABLE_NAME = shine
 REPO = https://github.com/susuyan/Shine
 VERSION = 0.1.0
 

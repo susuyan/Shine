@@ -10,6 +10,7 @@ import PathKit
 import Rainbow
 import SwiftCLI
 import Files
+import Yams
 
 public class Shine {
 
@@ -61,7 +62,28 @@ public class Shine {
         output("执行generate")
     }
 
-    public func initial(){
+    public func initial() throws{
         output("执行init")
+        let filePath =  Path("./shine.yml").string
+
+        let file = try File(path: filePath)
+        
+        let content =  try file.readAsString()
+
+        let decoder = YAMLDecoder()
+        
+        let shineFile: Shinefile = try decoder.decode(Shinefile.self, from: content)
+        
+        //创建一个目录
+        
+        try shineFile.directory.forEach { dir in
+            let dirPath = Path("./Examples/\(dir)")
+            output("mkdir \(dirPath)")
+            try dirPath.mkdir()
+        }
+
+        output("enjoys!")
+
+        
     }
 }

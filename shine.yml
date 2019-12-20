@@ -1,0 +1,16 @@
+--- # 文件结构
+directory:
+  - App
+  - AppResources
+  - Base
+  - Components
+  - Constants
+  - Documentation
+  - Extensions
+  - Helper
+  - Models
+  - Networking
+  - Resources
+  - Storyboards
+  - View Models
+  - Views
