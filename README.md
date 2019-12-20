@@ -5,6 +5,11 @@ Automatically generates from template and imports it into Xcode project.
 通过命令行的方式来初始化一个 Swift App 项目。
 
 ## Todo
+* [ ] 整理初始化时的重复操作
+* [ ] 编写模板代码
+* [ ] 梳理初始化工作，并分出对应的子模块出来，输出到对应的Feature中
+
+## Feature
 
 - [x] 通过 yml 来定制项目文件夹结构
 - [ ] 制作 stencil，并输出到对应的目录中
