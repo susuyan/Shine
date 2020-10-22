@@ -6,6 +6,7 @@ Automatically generates from template and imports it into Xcode project.
 
 ## Todo
 * [ ] 整理初始化时的重复操作
+* [ ] 梳理工作流
 * [ ] 编写模板代码
 * [ ] 梳理初始化工作，并分出对应的子模块出来，输出到对应的Feature中
 
